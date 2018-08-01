@@ -25,7 +25,7 @@ class UserInput extends Component {
     const text = this.userInput.textContent;
     if (text && text.length > 0) {
       this.props.onSubmit({
-        author: 'me',
+        author: this.props.login,
         type: 'text',
         data: { text }
       });
@@ -35,7 +35,7 @@ class UserInput extends Component {
 
   _handleEmojiPicked(emoji) {
     this.props.onSubmit({
-      author: 'me',
+      author: this.props.login,
       type: 'emoji',
       data: { emoji }
     });
@@ -72,7 +72,8 @@ class UserInput extends Component {
 
 UserInput.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  showEmoji: PropTypes.bool
+  showEmoji: PropTypes.bool,
+  login: PropTypes.string
 };
 
 export default UserInput;

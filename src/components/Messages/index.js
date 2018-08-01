@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import TextMessage from './TextMessage'
 import EmojiMessage from './EmojiMessage'
-import chatIconUrl from './../../assets/chat-icon.svg'
 
 
 class Message extends Component {
@@ -18,14 +17,11 @@ class Message extends Component {
   render () {
     let contentClassList = [
       "sc-message--content",
-      (this.props.message.author === "me" ? "sent" : "received")
+      (this.props.message.author === this.props.login ? "sent" : "received")
     ];
     return (
       <div className="sc-message">
         <div className={contentClassList.join(" ")}>
-          <div className="sc-message--avatar" style={{
-            backgroundImage: `url(${chatIconUrl})`
-          }}></div>
           {this._renderMessageOfType(this.props.message.type)}
         </div>
       </div>)

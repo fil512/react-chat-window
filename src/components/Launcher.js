@@ -32,8 +32,7 @@ class Launcher extends Component {
     ];
     return (
       <div>
-        <div>
-        </div>
+        <div />
         <div className={classList.join(' ')} onClick={this.handleClick.bind(this)}>
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
           <img className={"sc-open-icon"} src={launcherIconActive} />

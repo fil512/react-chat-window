@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Message from './Messages'
 
 class MessageList extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidUpdate(prevProps, prevState) {
     this.scrollList.scrollTop = this.scrollList.scrollHeight;
@@ -14,7 +11,7 @@ class MessageList extends Component {
     return (
       <div className="sc-message-list" ref={el => this.scrollList = el}>
         {this.props.messages.map((message, i) => {
-          return <Message message={message} key={i} />
+          return <Message login={this.props.login} message={message} key={i} />
         })}
       </div>)
   }
