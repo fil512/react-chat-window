@@ -34,6 +34,7 @@ class ChatWindow extends Component {
           <MessageList
             messages={messageList}
             imageUrl={this.props.agentProfile.imageUrl}
+            login={this.props.login}
           />
           <UserInput showEmoji={this.props.showEmoji} login={this.props.login} onSubmit={this.onUserInputSubmit.bind(this)}/>
         </div>
