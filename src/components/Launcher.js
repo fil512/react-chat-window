@@ -46,6 +46,7 @@ class Launcher extends Component {
           isOpen={isOpen}
           onClose={this.handleClick.bind(this)}
           showEmoji={this.props.showEmoji}
+          login={this.props.login}
         />
       </div>
     );
@@ -68,7 +69,8 @@ Launcher.propTypes = {
   isOpen: PropTypes.bool,
   handleClick: PropTypes.func,
   messageList: PropTypes.arrayOf(PropTypes.object),
-  showEmoji: PropTypes.bool
+  showEmoji: PropTypes.bool,
+  login: PropTypes.string
 };
 
 Launcher.defaultProps = {

@@ -1,6 +1,6 @@
 {
   "name": "react-chat-window",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "react-live-chat React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,16 +23,16 @@
     "emoji-js": "3.2.2",
     "gh-pages": "^1.0.0",
     "prop-types": "15.5.10",
-    "react-highlight.js": "1.0.5",
+    "react-highlight.js": "1.0.7",
     "socket.io-client": "2.0.3"
   },
   "peerDependencies": {
-    "react": "15.x"
+    "react": "16.4.1"
   },
   "devDependencies": {
-    "nwb": "0.17.x",
-    "react": "15.6.1",
-    "react-dom": "15.6.1"
+    "nwb": "0.21.x",
+    "react": "16.4.1",
+    "react-dom": "16.4.1"
   },
   "author": "",
   "homepage": "",
