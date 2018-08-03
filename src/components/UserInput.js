@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import SendIcon from './icons/SendIcon';
+import MuteIcon from './icons/MuteIcon';
 import EmojiIcon from './icons/EmojiIcon';
 import EmojiPicker from './emoji-picker/EmojiPicker';
 
@@ -33,6 +34,11 @@ class UserInput extends Component {
     }
   }
 
+  _mute(event) {
+    event.preventDefault();
+    this.props.onMute();
+  }
+
   _handleEmojiPicked(emoji) {
     this.props.onSubmit({
       author: this.props.login,
@@ -62,6 +68,9 @@ class UserInput extends Component {
             {this.props.showEmoji && <EmojiIcon onEmojiPicked={this._handleEmojiPicked.bind(this)} />}
           </div>
           <div className="sc-user-input--button">
+            <MuteIcon onClick={this._mute.bind(this)} />
+          </div>
+          <div className="sc-user-input--button">
             <SendIcon onClick={this._submitText.bind(this)} />
           </div>
         </div>
@@ -72,6 +81,7 @@ class UserInput extends Component {
 
 UserInput.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  onMute: PropTypes.func.isRequired,
   showEmoji: PropTypes.bool,
   login: PropTypes.string
 };

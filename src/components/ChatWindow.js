@@ -14,6 +14,10 @@ class ChatWindow extends Component {
       this.props.onUserInputSubmit(message);
     }
 
+    onMute() {
+      this.props.onMute();
+    }
+
     onMessageReceived(message) {
       this.setState({ messages: [...this.state.messages, message] });
     }
@@ -36,7 +40,7 @@ class ChatWindow extends Component {
             imageUrl={this.props.agentProfile.imageUrl}
             login={this.props.login}
           />
-          <UserInput showEmoji={this.props.showEmoji} login={this.props.login} onSubmit={this.onUserInputSubmit}/>
+          <UserInput showEmoji={this.props.showEmoji} login={this.props.login} onSubmit={this.props.onUserInputSubmit} onMute={this.props.onMute} />
         </div>
       );
     }
