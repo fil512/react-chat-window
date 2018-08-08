@@ -2,7 +2,13 @@ export default [
   {
     name: 'Audio',
     emojis: [
+      { emoji: '🎺', audio: 'bugle.wav'},
       { emoji: '🔔', audio: 'gong.wav'},
+      { emoji: '🚇', audio: 'train.mp3'},
+      { emoji: '📡', audio: 'sonar.wav'},
+      { emoji: '💣', audio: 'cannon.mp3'},
+      { emoji: '🚀', audio: 'plane.mp3'},
+      { emoji: '🐴', audio: 'horse.wav'},
     ],
   },
   {

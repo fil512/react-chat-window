@@ -14,10 +14,6 @@ class ChatWindow extends Component {
       this.props.onUserInputSubmit(message);
     }
 
-    onMessageReceived(message) {
-      this.setState({ messages: [...this.state.messages, message] });
-    }
-
     render() {
       let messageList = this.props.messageList || [];
       let classList = [
@@ -35,7 +31,6 @@ class ChatWindow extends Component {
             messages={messageList}
             imageUrl={this.props.agentProfile.imageUrl}
             login={this.props.login}
-            audioUrl={this.props.audioUrl}
           />
           <UserInput showEmoji={this.props.showEmoji} login={this.props.login} onSubmit={this.props.onUserInputSubmit} />
         </div>

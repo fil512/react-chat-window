@@ -46,7 +46,6 @@ class Launcher extends Component {
           onClose={this.handleClick.bind(this)}
           showEmoji={this.props.showEmoji}
           login={this.props.login}
-          audioUrl={this.props.audioUrl}
         />
       </div>
     );

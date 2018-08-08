@@ -11,7 +11,6 @@ class MessageList extends Component {
     return (
       <div className="sc-message-list" ref={el => this.scrollList = el}>
         {this.props.messages.map((message, i) => {
-          message.url = this.props.audioUrl;
           return <Message login={this.props.login} message={message} key={i} />
         })}
       </div>)
