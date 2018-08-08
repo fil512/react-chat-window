@@ -1,7 +1,7 @@
 .sc-message {
   width: 300px;
   margin: auto;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   display: flex;
 }
 
@@ -34,15 +34,15 @@
   font-size: 11px;
   color: #90949c;
   opacity: 0.9;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .sc-message--text {
-  padding: 17px 20px;
-  border-radius: 6px;
+  padding: 7px 10px;
+  border-radius: 2px;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.2;
   white-space: pre-wrap;
   -webkit-font-smoothing: subpixel-antialiased
 }
@@ -56,11 +56,11 @@
 .sc-message--content.received .sc-message--text {
   color: #263238;
   background-color: #e9ebee;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .sc-message--emoji {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 @media (max-width: 450px) {

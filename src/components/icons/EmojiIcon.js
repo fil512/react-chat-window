@@ -31,6 +31,7 @@ class EmojiIcon extends Component {
       { this.state.isActive && 
         <EmojiPicker 
           onEmojiPicked={this.props.onEmojiPicked}
+          onAudioPicked={this.props.onAudioPicked}
           onBlur={this._handlePickerBlur.bind(this)}
         />
       }

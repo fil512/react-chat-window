@@ -34,19 +34,34 @@ class EmojiPicker extends Component {
             return (
               <div className="sc-emoji-picker--category" key={category.name}>
                 <div className="sc-emoji-picker--category-title">{category.name}</div>
-                {category.emojis.map((emoji) => {
-                  return (
-                    <span
-                      key={emoji}
-                      className="sc-emoji-picker--emoji"
-                      onClick={() => {
-                        this.props.onEmojiPicked(emoji);
-                        this.domNode.blur();
-                      }}
-                    >
-                      {emoji}
-                    </span>
-                  );
+                {category.emojis.map((item) => {
+                  if (category.name === 'Audio') {
+                    return (
+                      <span
+                        key={item.audio}
+                        className="sc-emoji-picker--emoji"
+                        onClick={() => {
+                          this.props.onAudioPicked(item);
+                          this.domNode.blur();
+                        }}
+                      >
+                        {item.emoji}
+                      </span>
+                    );
+                  } else {
+                    return (
+                      <span
+                        key={item}
+                        className="sc-emoji-picker--emoji"
+                        onClick={() => {
+                          this.props.onEmojiPicked(item);
+                          this.domNode.blur();
+                        }}
+                      >
+                        {item}
+                      </span>
+                    );
+                  }
                 })}
               </div>
             );

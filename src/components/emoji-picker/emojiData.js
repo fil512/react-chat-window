@@ -1,5 +1,11 @@
 export default [
   {
+    name: 'Audio',
+    emojis: [
+      { emoji: '🔔', audio: 'gong.wav'},
+    ],
+  },
+  {
     name: 'People',
     emojis: [
       '😄',

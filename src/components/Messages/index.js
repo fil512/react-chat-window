@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TextMessage from './TextMessage'
 import EmojiMessage from './EmojiMessage'
+import AudioMessage from './AudioMessage'
 
 
 class Message extends Component {
@@ -11,6 +12,8 @@ class Message extends Component {
         return <TextMessage {...this.props.message} />
       case 'emoji':
         return <EmojiMessage {...this.props.message} />
+      case 'audio':
+        return <AudioMessage {...this.props.message} />
     }
   }
 

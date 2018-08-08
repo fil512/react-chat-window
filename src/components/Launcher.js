@@ -41,12 +41,12 @@ class Launcher extends Component {
         <ChatWindow
           messageList={this.props.messageList}
           onUserInputSubmit={this.props.onMessageWasSent}
-          onMute={this.props.onMute}
           agentProfile={this.props.agentProfile}
           isOpen={isOpen}
           onClose={this.handleClick.bind(this)}
           showEmoji={this.props.showEmoji}
           login={this.props.login}
+          audioUrl={this.props.audioUrl}
         />
       </div>
     );
@@ -65,7 +65,6 @@ const MessageCount = (props) => {
 Launcher.propTypes = {
   onMessageWasReceived: PropTypes.func,
   onMessageWasSent: PropTypes.func,
-  onMute: PropTypes.func,
   newMessagesCount: PropTypes.number,
   isOpen: PropTypes.bool,
   handleClick: PropTypes.func,
